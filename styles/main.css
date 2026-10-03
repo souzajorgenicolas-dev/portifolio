@@ -1843,9 +1843,9 @@ button:focus-visible {
 
     .hero {
         padding-top: 18vh;
-        min-height: 900px;
-        height: 100svh;
-        max-height: 1050px
+        min-height: 760px;
+        height: min(100svh, 800px);
+        max-height: 800px
     }
 
     .hero-content {
@@ -1929,8 +1929,8 @@ button:focus-visible {
 
     .about-layout {
         grid-template-columns: 1fr;
-        gap: 38px;
-        padding: 55px 0
+        gap: 34px;
+        padding: 44px 0
     }
 
     .about-identity {
@@ -2192,4 +2192,10 @@ button:focus-visible {
 .contact-link strong i {
     font-variant-emoji: text;
     font-family: var(--mono)
+}
+
+@media(max-width:650px) {
+    .about.section-pad {
+        padding-top: 64px
+    }
 }
