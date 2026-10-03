@@ -1877,7 +1877,7 @@ button:focus-visible {
         max-height: 380px;
         right: 11%;
         top: auto;
-        bottom: 15%;
+        bottom: 9%;
         transform: none;
         padding: 8px
     }
@@ -1924,13 +1924,13 @@ button:focus-visible {
     }
 
     .hero-index {
-        bottom: 27px
+        bottom: 16px
     }
 
     .about-layout {
         grid-template-columns: 1fr;
-        gap: 34px;
-        padding: 44px 0
+        gap: 26px;
+        padding: 28px 0
     }
 
     .about-identity {
@@ -2196,6 +2196,140 @@ button:focus-visible {
 
 @media(max-width:650px) {
     .about.section-pad {
-        padding-top: 64px
+        padding-top: 32px
+    }
+}
+
+@media(max-width:900px) {
+    .hero {
+        min-height: min(680px, 100svh);
+        height: min(100svh, 760px);
+        max-height: 760px;
+        padding-top: 100px
+    }
+
+    .hero-content {
+        width: 56%
+    }
+
+    .hero-sigil {
+        width: min(34vw, 250px);
+        right: 6%;
+        opacity: .35
+    }
+
+    .section-pad {
+        padding-top: 62px;
+        padding-bottom: 76px
+    }
+
+    .about.section-pad {
+        padding-top: 32px
+    }
+
+    .about-layout {
+        gap: 26px;
+        padding: 28px 0
+    }
+}
+
+@media(max-width:650px) {
+    .hero {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        align-items: flex-start;
+        padding-top: 128px;
+        padding-bottom: 32px
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-top: 0
+    }
+
+    .hero-sigil,
+    .hero-tags {
+        display: none
+    }
+
+    .hero-index {
+        position: relative;
+        inset: auto;
+        margin-top: 34px
+    }
+
+    .about.section-pad {
+        padding-top: 32px
+    }
+
+    .about-layout {
+        gap: 22px;
+        padding: 24px 0
+    }
+}
+
+.hero-sigil {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 8%;
+    width: clamp(260px, 35vw, 440px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border: 1px solid #b6f36b42;
+    border-radius: 50%;
+    background: radial-gradient(circle, #b6f36b0b, transparent 70%);
+    box-shadow: 0 0 70px #b6f36b08;
+    transform: translateY(-50%)
+}
+
+.hero-sigil::before,
+.hero-sigil::after {
+    content: '';
+    position: absolute;
+    inset: -18px;
+    border: 1px solid #ffffff12;
+    border-radius: 50%;
+    transform: rotateX(65deg) rotate(24deg)
+}
+
+.hero-sigil::after {
+    inset: 19px;
+    border-color: #b6f36b20;
+    transform: rotateX(65deg) rotate(-24deg)
+}
+
+.hero-sigil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: .82
+}
+
+.sigil-label {
+    position: absolute;
+    right: -29px;
+    bottom: 17%;
+    padding: 5px 8px;
+    background: var(--bg);
+    color: #a2a8a0;
+    font-size: 8px
+}
+
+@media(max-width:900px) {
+    .hero-sigil {
+        width: min(34vw, 250px);
+        right: 6%;
+        opacity: .35
+    }
+}
+
+@media(max-width:650px) {
+    .hero-sigil,
+    .hero-tags {
+        display: none
     }
 }
