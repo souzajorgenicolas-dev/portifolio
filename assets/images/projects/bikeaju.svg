@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <rect width="420" height="150" rx="75" fill="#102b45"/>
+  <circle cx="110" cy="75" r="51" fill="none" stroke="#ef4b35" stroke-width="8"/>
+  <circle cx="83" cy="91" r="16" fill="none" stroke="#fff" stroke-width="5"/>
+  <circle cx="136" cy="91" r="16" fill="none" stroke="#fff" stroke-width="5"/>
+  <path d="M83 91 L104 55 L118 91 L136 91 M104 55 L93 55 M104 55 L121 47 L137 60" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="170" y="78" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="800">bike</text>
+  <text x="254" y="78" fill="#ef4b35" font-family="Arial, sans-serif" font-size="34" font-weight="800">aju</text>
+  <text x="171" y="103" fill="#dbe5ec" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">SHOP • BIKE • AVENTURA</text>
+</svg>
