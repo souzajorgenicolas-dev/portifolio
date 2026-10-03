@@ -4,22 +4,22 @@ import { profile, contactItems } from '../data/config.js';
 const projectGrid = document.querySelector('#project-grid');
 projectGrid.innerHTML = projects.map((project, index) => `
   <article class="project-card reveal" data-project>
-    <a class="project-visual project-${escapeHTML(project.visual)}" data-cursor="ABRIR" href="${safeUrl(project.liveUrl)}" target="_blank" rel="noreferrer" aria-label="Abrir ${escapeHTML(project.name)} em uma nova aba"><div class="project-cover"><img class="project-thumbnail" src="${escapeHTML(project.image)}" alt="Thumbnail de ${escapeHTML(project.name)}" loading="lazy"><span class="art-index">${escapeHTML(project.category)}</span><span class="art-corner">ABRIR PROJETO ↗</span></div></a>
-    <div class="project-meta"><div><span class="project-number">PROJETO ${String(index + 1).padStart(2, '0')} ${project.featured ? '· EM DESTAQUE' : ''}</span><h3 class="project-name">${escapeHTML(project.name)}</h3><p class="project-description">${escapeHTML(project.description)}</p></div><span class="mono">↗</span></div>
+    <a class="project-visual project-${escapeHTML(project.visual)}" data-cursor="ABRIR" href="${safeUrl(project.liveUrl)}" target="_blank" rel="noreferrer" aria-label="Abrir ${escapeHTML(project.name)} em uma nova aba"><div class="project-cover"><img class="project-thumbnail" src="${escapeHTML(project.image)}" alt="Thumbnail de ${escapeHTML(project.name)}" loading="lazy"><span class="art-index">${escapeHTML(project.category)}</span><span class="art-corner">ABRIR PROJETO ↗︎</span></div></a>
+    <div class="project-meta"><div><span class="project-number">PROJETO ${String(index + 1).padStart(2, '0')} ${project.featured ? '· EM DESTAQUE' : ''}</span><h3 class="project-name">${escapeHTML(project.name)}</h3><p class="project-description">${escapeHTML(project.description)}</p></div><span class="mono">↗︎</span></div>
     <div class="project-tech">${project.technologies.map(tech => `<span>${escapeHTML(tech)}</span>`).join('')}${project.note ? `<span class="project-note">${escapeHTML(project.note)}</span>` : ''}</div>
-    <div class="project-links"><a href="${safeUrl(project.liveUrl)}" target="_blank" rel="noreferrer">Visualizar projeto <span>↗</span></a>${project.githubUrl ? `<a href="${safeUrl(project.githubUrl)}" target="_blank" rel="noreferrer">Código <span>↗</span></a>` : ''}</div>
+    <div class="project-links"><a href="${safeUrl(project.liveUrl)}" target="_blank" rel="noreferrer">Visualizar projeto <span>↗︎</span></a>${project.githubUrl ? `<a href="${safeUrl(project.githubUrl)}" target="_blank" rel="noreferrer">Código <span>↗︎</span></a>` : ''}</div>
   </article>`).join('');
 
 const technologies = [
   ['JavaScript', 'Interatividade e lógica para experiências web.'], ['Java', 'Programação orientada a objetos e aplicações.'], ['Python', 'Automação, lógica e soluções versáteis.'], ['HTML', 'Estrutura semântica para a web.'], ['CSS', 'Estilo, layout e interfaces responsivas.'], ['Git / GitHub', 'Versionamento e colaboração em código.'], ['SQL', 'Consulta e organização de dados.']
 ];
-document.querySelector('#stack-list').innerHTML = technologies.map(([name, desc], i) => `<div class="stack-item"><span class="stack-index">0${i + 1}</span><div><span class="stack-name">${name}</span><span class="stack-description">${desc}</span></div><span class="stack-arrow">↗</span></div>`).join('');
+document.querySelector('#stack-list').innerHTML = technologies.map(([name, desc], i) => `<div class="stack-item"><span class="stack-index">0${i + 1}</span><div><span class="stack-name">${name}</span><span class="stack-description">${desc}</span></div><span class="stack-arrow">↗︎</span></div>`).join('');
 
 const contactLinks = document.querySelector('#contact-links');
 contactLinks.innerHTML = contactItems.map(item => {
   const value = profile[item.key];
   const href = item.key === 'email' && value ? `mailto:${value}` : value;
-  return `<a class="contact-link" ${href ? `href="${safeUrl(href)}" target="_blank" rel="noreferrer"` : 'href="#" aria-disabled="true"'}><span>${item.label}</span><strong>${value ? escapeHTML(item.name) : item.name + ' ↗'}</strong></a>`;
+  return `<a class="contact-link" ${href ? `href="${safeUrl(href)}" target="_blank" rel="noreferrer"` : 'href="#" aria-disabled="true"'}><span>${item.label}</span><strong>${value ? escapeHTML(item.name) : item.name + ' ↗︎'}</strong></a>`;
 }).join('');
 const cta = document.querySelector('#contact-cta');
 if (profile.whatsapp) { cta.href = safeUrl(profile.whatsapp); cta.target = '_blank'; cta.rel = 'noreferrer'; }
